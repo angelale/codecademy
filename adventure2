@@ -1,0 +1,30 @@
+var user = prompt ("What peoples of Middle-Earth do you represent?").toLowerCase();
+
+switch (user) {
+    case 'elves':
+      var weapon = prompt ("What is your weapon of choice?").toLowerCase();
+      if (weapon === 'ring' || weapon === 'silmaril') {
+        console.log ("You are ready to defeat Sauron"); 
+      } else { console.log ("Join the fight when you have acquired a proper weapon.");
+      }
+      break;
+    case 'dwarves':
+        var army = prompt ("To whose army are you loyal?").toLowerCase();
+        var allegiance = prompt ("Do you still live in Moria? (YES OR NO)").toLowerCase();
+        if (army === 'durin' && allegiance === 'yes') {
+            console.log ("Sorry you perish in the mines of Moria");
+        } else {console.log ("You are ready to fight against the armies of Sauron!");
+        }
+        break;
+    case 'man':
+        var wraith = prompt ("Are you tempted by mysterious rings of power (yes or no) ?").toLowerCase();
+        if (wraith === 'yes') {
+            console.log ("You become a ringwraith cursed to forever serve Sauron and the one ring.") ;
+        } else {
+        console.log ("Welcome, second-born!");
+        }
+        break;
+    default:
+    console.log ("You must be an orc. Away with you spy!");
+}
+    
