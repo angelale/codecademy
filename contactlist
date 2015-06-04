@@ -1,0 +1,42 @@
+var friends = {};
+    friends.bill = {
+       firstName: "Bill",
+       lastName: "Gates",
+       number: "(206) 555-555",
+       address:['One Microsoft Way', 'Redmond', 'WA', '98052']
+        },
+    friends.steve = {
+       firstName: "Steve",
+       lastName: "Jobs",
+       number: "(408) 555-5555",
+       address: ['One Apple Way', 'Cupertino', 'CA', '95121']
+        },
+    friends.cookie = {
+       firstName: "Cookie",
+       lastName: "Shum",
+       number: "(408) 839-2967",
+       address: ['19 Clementina St', 'San Francisco', 'CA', '94105']
+        },
+    friends.ramen = {
+        firstName: "Ramen",
+        lastName: "Shum",
+        number: "(415) 606-7442",
+        address: ['73 Sumner St', 'San Francisco', 'CA', '94103']
+        }
+
+
+var list = function(obj) {
+  for(var prop in obj) {
+    console.log(prop);
+  }
+};
+
+var search = function (name) {
+    for (var prop in friends) {
+        if( friends[prop].firstName === name)
+        { console.log (friends[prop]);
+        };
+    };
+}
+list (friends);
+search ('Cookie')
