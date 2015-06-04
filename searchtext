@@ -1,0 +1,18 @@
+/*jshint multistr:true */
+var text = "Angela blah blah blah \
+blah Angela blah blah balh";
+
+var myName = "Angela";
+var hits = [];
+
+for (var i = 0 ; i < text.length; i+=1) {
+    if(text[i] === 'A') {
+for (var j=i ; j < myName.length + i; j++) {
+    hits.push(text[j]);
+}
+}
+}
+if (hits.length === 0) {
+    console.log("Your name wasn't found!");
+} else {console.log (hits);
+}
